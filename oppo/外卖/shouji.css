@@ -1,0 +1,39 @@
+*{margin: 0px;padding: 0px;}
+#content{width: 100%;height: 100%;}
+#header{
+	width: 100%;
+	height: 6.7rem;
+	background: url("img/1.png") ;
+	background-size: cover;
+}
+#header ul li:first-child{
+	float:left;
+}
+#header ul:first-child li img{
+	width: 3.2rem;
+	height: 3.2rem;
+	margin-top: 1.2rem;
+	margin-left: 1.2rem;
+	/*width: 1.5rem;*/
+	/*height: 100%;*/
+	/*float:left;*/
+	/*margin-bottom: 2rem;*/
+	}
+#header ul li:nth-child(2){
+	float: right;
+}
+#header ul li:nth-child(2) p img{
+	width: 1.5rem;
+	height: 100%;
+}
+#header ul li:nth-child(2) p span{
+	color:#fff;
+	
+	}
+	
+/*#header ul li span{*/
+	/*list-style: none;*/
+	/*padding-bottom: 2rem;*/
+	/*font-size: 0.5rem;*/
+	/*color: #fff;*/
+/*}*/

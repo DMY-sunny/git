@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" style="font-size: 20px;">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+	<title>Document</title>
+	 <script>
+         (function(doc,win){
+            var docEl=doc.documentElement;
+
+            //  
+            if(!doc.addEventListener)return;
+            //     
+            var run=function(){
+                var clientWidth=doc.documentElement.clientWidth;
+                docEl.style.fontSize=20/320*clientWidth+"px";
+
+            };
+            var resizeEvt= "orientationchange" in window?"orientationchange":"resize";
+            //       
+            win.addEventListener(resizeEvt,run,false);
+            doc.addEventListener("DOMContentLoaded",run,false);
+            
+        })(document,window);
+    </script>
+ 	<link rel="stylesheet" href="shouji.css" />
+</head>
+<body>
+	<div id="content">
+		<!--头部开始-->
+		<div id="header">
+			 <ul>
+    		  	<li><img src="img/01.png"></li>
+    		  	
+    		  	<li class="text">
+	    		  		<p class="text1"><img src="img/品牌.png">
+	    		  			<span>粥品香坊(大运村)</span>
+	    		  		</p>
+	    		  		<!--<p class="text2">蜂鸟专送/38分钟送达</p>-->
+	    		  		<!--<p class="text3"><img src="img/lower.png"> 
+	    		  		     <span>在线支付满28减5,满50减10</span>
+	    		  		</p>-->
+
+    		  	</li>
+    		  	</ul> 
+    		  
+			
+		</div>		
+	</div>
+</body>
+</html>

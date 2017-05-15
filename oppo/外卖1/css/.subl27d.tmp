@@ -1,0 +1,20 @@
+*{margin:0;padding: 0;}
+a:hover{text-decoration: none;}
+li{list-style: none;}
+body{width:100%;}
+.main-header{background:#009B72;height:2.3rem;color:#fff;font-size: 1.3rem;min-height: 0.5rem;line-height: 2.4rem;}
+.main-header .headerstyle div{border-left:1px solid #47b488;height: 90%;}
+.main-header .headerstyle div a{color:#fff;}
+.main-header .headerstyle div:hover{background: #47b488;}
+.header-text{height: 6.01%;margin:0 auto;}
+.header-text .logo {height: 6.5rem;line-height: 6.5rem;}
+.header-text .logo img{margin-left: -8%;margin-top: 2rem;}
+.header-text .text {text-align: right;}
+.header-text .text ul{height: 6.5rem;line-height: 6.5rem;display: flex;flex:1;justify-content:space-between;margin-left: 6%;}
+.header-text .text ul li{float: left;text-align: center;height: 70%;}
+.header-text .text ul li:first-child{border-bottom:3px solid #009B72;}
+.header-text .text ul li a{color:#393939;font-size:1.5rem;height: 50%;}
+.header-text .text ul li:hover a{font-weight: bold;}
+.lunbo{height: 56.4rem;overflow: hidden;width:200%;}
+/*.lunbo .lb{width:150%;overflow:hidden;}*/
+.lunbo .lb img{width:50%;}

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap - ç®€æ´ã€ç›´è§‚ã€å¼ºæ‚ã€ç§»åŠ¨è®¾å¤‡ä¼˜å…ˆçš„å‰ç«¯å¼€å‘æ¡†æ¶ï¼Œè®©webå¼€å‘æ›´è¿…é€Ÿã€ç®€å•ã€‚">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="ç‹èµ› <wangsai@bootcss.com>">
+
+<title>
+  
+    èµ·æ­¥ &middot; Bootstrap ä¸­æ–‡æ–‡æ¡£
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" tppabs="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="patch.css" tppabs="http://v3.bootcss.com/assets/css/patch.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="docs.min.css" tppabs="http://v3.bootcss.com/assets/css/docs.min.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="ie8-responsive-file-warning.js" tppabs="http://v3.bootcss.com/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="ie-emulation-modes-warning.js" tppabs="http://v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="html5shiv.js" tppabs="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="respond.min.js" tppabs="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico">
+<script>
+  var _hmt = _hmt || [];
+</script>
+  </head>
+  <body>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.htm" tppabs="http://v3.bootcss.com/" class="navbar-brand">Bootstrap</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="index-1.htm" tppabs="http://v3.bootcss.com/getting-started/">èµ·æ­¥</a>
+        </li>
+        <li>
+          <a href="index-2.htm" tppabs="http://v3.bootcss.com/css/">å…¨å±€ CSS æ ·å¼</a>
+        </li>
+        <li>
+          <a href="index-3.htm" tppabs="http://v3.bootcss.com/components/">ç»„ä»¶</a>
+        </li>
+        <li>
+          <a href="index-4.htm" tppabs="http://v3.bootcss.com/javascript/">JavaScript æ’ä»¶</a>
+        </li>
+        <li>
+          <a href="index-5.htm" tppabs="http://v3.bootcss.com/customize/">å®šåˆ¶</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:if(confirm('http://job.bootcss.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://job.bootcss.com/'" tppabs="http://job.bootcss.com/" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'doc-home-navbar-job'])" target="_blank">é«˜è–ªå·¥ä½œ</a></li>
+        <li><a href="javascript:if(confirm('http://expo.bootcss.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://expo.bootcss.com/'" tppabs="http://expo.bootcss.com/" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'doc-home-navbar-expo'])" target="_blank">ä¼˜ç«™ç²¾é€‰</a></li>
+        <li><a href="javascript:if(confirm('http://blog.getbootstrap.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://blog.getbootstrap.com/'" tppabs="http://blog.getbootstrap.com/" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'doc-home-navbar-blog'])" target="_blank">å®˜æ–¹åšå®¢</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="content">
+      <div class="container">
+        <h1>èµ·æ­¥</h1>
+        <p>ç®€è¦ä»‹ç» Bootstrapï¼Œä»¥åŠå¦‚ä½•ä¸‹è½½ã€ä½¿ç”¨ï¼Œè¿˜æœ‰åŸºæœ¬æ¨¡ç‰ˆå’Œæ¡ˆä¾‹ï¼Œç­‰ç­‰ã€‚</p>
+        
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+      <div class="row">
+        <div class="col-md-9" role="main">
+          <div class="bs-docs-section">
+  <h1 id="download" class="page-header">ä¸‹è½½</h1>
+
+  <p class="lead">Bootstrap ï¼ˆå½“å‰ç‰ˆæœ¬ v3.3.0ï¼‰æä¾›ä»¥ä¸‹å‡ ç§æ–¹å¼å¸®ä½ å¿«é€Ÿä¸Šæ‰‹ï¼Œæ¯ä¸€ç§æ–¹å¼é’ˆå¯¹å…·æœ‰ä¸åŒæŠ€èƒ½ç­‰çº§çš„å¼€å‘è€…å’Œä¸åŒçš„ä½¿ç”¨åœºæ™¯ã€‚ç»§ç»­é˜…è¯»ä¸‹é¢çš„å†…å®¹ï¼Œçœ‹çœ‹å“ªç§æ–¹å¼é€‚åˆä½ çš„éœ€æ±‚å§ã€‚</p>
+
+  <div class="row bs-downloads">
+    <div class="col-sm-4">
+      <h3 id="download-bootstrap">ç”¨äºç”Ÿäº§ç¯å¢ƒçš„ Bootstrap</h3>
+      <p>ç¼–è¯‘å¹¶å‹ç¼©åçš„ CSSã€JavaScript å’Œå­—ä½“æ–‡ä»¶ã€‚ä¸åŒ…å«æ–‡æ¡£å’Œæºç æ–‡ä»¶ã€‚</p>
+      <p>
+        <a href="javascript:if(confirm('http://d.bootcss.com/bootstrap-3.3.0-dist.zip  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://d.bootcss.com/bootstrap-3.3.0-dist.zip'" tppabs="http://d.bootcss.com/bootstrap-3.3.0-dist.zip" class="btn btn-lg btn-outline" role="button" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">ä¸‹è½½ Bootstrap</a>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3 id="download-source">Bootstrap æºç </h3>
+      <p>Lessã€JavaScript å’Œ å­—ä½“æ–‡ä»¶çš„æºç ï¼Œå¹¶ä¸”å¸¦æœ‰æ–‡æ¡£ã€‚<strong>éœ€è¦ Less ç¼–è¯‘å™¨å’Œ<a href="#grunt">ä¸€äº›è®¾ç½®å·¥ä½œ</a></strong>ã€‚</p>
+      <p>
+        <a href="javascript:if(confirm('http://d.bootcss.com/bootstrap-3.3.0-source.zip  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://d.bootcss.com/bootstrap-3.3.0-source.zip'" tppabs="http://d.bootcss.com/bootstrap-3.3.0-source.zip" class="btn btn-lg btn-outline" role="button" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">ä¸‹è½½æºç </a>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3 id="download-sass">Sass</h3>
+      <p><a href="javascript:if(confirm('https://github.com/twbs/bootstrap-sass  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap-sass'" tppabs="https://github.com/twbs/bootstrap-sass">è¿™æ˜¯ Bootstrap ä» Less åˆ° Sass çš„æºç ç§»æ¤é¡¹ç›®</a>ï¼Œç”¨äºå¿«é€Ÿåœ°åœ¨ Railsã€Compass æˆ– åªé’ˆå¯¹ Sass çš„é¡¹ç›®ä¸­å¼•å…¥ã€‚</p>
+      <p>
+        <a href="javascript:if(confirm('http://d.bootcss.com/bootstrap-3.3.0-sass.tar.gz  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://d.bootcss.com/bootstrap-3.3.0-sass.tar.gz'" tppabs="http://d.bootcss.com/bootstrap-3.3.0-sass.tar.gz" class="btn btn-lg btn-outline" role="button" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Sass');">ä¸‹è½½ Sass é¡¹ç›®</a>
+      </p>
+    </div>
+  </div>
+
+  <h3 id="download-cdn">ä½¿ç”¨ Bootstrap ä¸­æ–‡ç½‘æä¾›çš„å…è´¹ CDN åŠ é€ŸæœåŠ¡</h3>
+  <p><a href="javascript:if(confirm('http://www.bootcss.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.bootcss.com/'" tppabs="http://www.bootcss.com/">Bootstrap ä¸­æ–‡ç½‘</a> ä¸º Bootstrap ä¸“é—¨æ„å»ºäº†è‡ªå·±çš„å…è´¹ CDN åŠ é€ŸæœåŠ¡ã€‚åŸºäºå›½å†…äº‘å‚å•†çš„ CDN æœåŠ¡ï¼Œè®¿é—®é€Ÿåº¦æ›´å¿«ã€åŠ é€Ÿæ•ˆæœæ›´æ˜æ˜¾ã€æ²¡æœ‰é€Ÿåº¦å’Œå¸¦å®½é™åˆ¶ã€æ°¸ä¹…å…è´¹ã€‚Bootstrap ä¸­æ–‡ç½‘è¿˜å¯¹å¤§é‡çš„å‰ç«¯å¼€æºå·¥å…·åº“æä¾›äº† CDN åŠ é€ŸæœåŠ¡ï¼Œè¯·è¿›å…¥<a href="javascript:if(confirm('http://www.bootcdn.cn/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.bootcdn.cn/'" tppabs="http://www.bootcdn.cn/"
+  >BootCDN ä¸»é¡µ</a>æŸ¥çœ‹æ›´å¤šå¯ç”¨çš„å·¥å…·åº“ã€‚</p>
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- æ–° Bootstrap æ ¸å¿ƒ CSS æ–‡ä»¶ --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- å¯é€‰çš„Bootstrapä¸»é¢˜æ–‡ä»¶ï¼ˆä¸€èˆ¬ä¸ç”¨å¼•å…¥ï¼‰ --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css&quot;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- jQueryæ–‡ä»¶ã€‚åŠ¡å¿…åœ¨bootstrap.min.js ä¹‹å‰å¼•å…¥ --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- æœ€æ–°çš„ Bootstrap æ ¸å¿ƒ JavaScript æ–‡ä»¶ --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+
+  <h3 id="download-bower">é€šè¿‡ Bower è¿›è¡Œå®‰è£…</h3>
+  <p>é€šè¿‡ <a href="javascript:if(confirm('http://bower.io/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://bower.io/'" tppabs="http://bower.io/">Bower</a> å¯ä»¥å®‰è£…å¹¶ç®¡ç† Bootstrap çš„Lessã€CSSã€JavaScriptå’Œå­—ä½“æ–‡ä»¶ã€‚</p>
+  <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower install bootstrap
+</code></pre></div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="whats-included" class="page-header">åŒ…å«çš„å†…å®¹</h1>
+
+  <p class="lead">Bootstrap æä¾›äº†ä¸¤ç§å½¢å¼çš„å‹ç¼©åŒ…ï¼Œåœ¨ä¸‹è½½ä¸‹æ¥çš„å‹ç¼©åŒ…å†…å¯ä»¥çœ‹åˆ°ä»¥ä¸‹ç›®å½•å’Œæ–‡ä»¶ï¼Œè¿™äº›æ–‡ä»¶æŒ‰ç…§ç±»åˆ«æ”¾åˆ°äº†ä¸åŒçš„ç›®å½•å†…ï¼Œå¹¶ä¸”æä¾›äº†å‹ç¼©ä¸æœªå‹ç¼©ä¸¤ç§ç‰ˆæœ¬ã€‚</p>
+
+  <div class="bs-callout bs-callout-warning" id="jquery-required">
+    <h4>Bootstrap æ’ä»¶å…¨éƒ¨ä¾èµ– jQuery</h4>
+    <p>è¯·æ³¨æ„ï¼Œ<strong>Bootstrap çš„æ‰€æœ‰ JavaScript æ’ä»¶éƒ½ä¾èµ– jQueryï¼Œ</strong>å› æ­¤ jQuery å¿…é¡»åœ¨ Bootstrap ä¹‹å‰å¼•å…¥ï¼Œå°±åƒåœ¨<a href="#template">åŸºæœ¬æ¨¡ç‰ˆ</a>ä¸­æ‰€å±•ç¤ºçš„ä¸€æ ·ã€‚åœ¨<a href="javascript:if(confirm('https://github.com/twbs/bootstrap/blob/v3.3.0/bower.json  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/blob/v3.3.0/bower.json'" tppabs="https://github.com/twbs/bootstrap/blob/v3.3.0/bower.json"> <code>bower.json</code> æ–‡ä»¶ä¸­</a> åˆ—å‡ºäº† Bootstrap æ‰€æ”¯æŒçš„ jQuery ç‰ˆæœ¬ã€‚</p>
+  </div>
+
+  <h2 id="whats-included-precompiled">é¢„ç¼–è¯‘ç‰ˆ</h2>
+  <p>ä¸‹è½½å‹ç¼©åŒ…ä¹‹åï¼Œå°†å…¶è§£å‹ç¼©åˆ°ä»»æ„ç›®å½•å³å¯çœ‹åˆ°ä»¥ä¸‹ï¼ˆå‹ç¼©ç‰ˆçš„ï¼‰ç›®å½•ç»“æ„ï¼š</p>
+<!-- NOTE: This info is intentionally duplicated in the README.
+Copy any changes made here over to the README too. -->
+<div class="highlight"><pre><code class="bash">bootstrap/
+â”œâ”€â”€ css/
+â”‚   â”œâ”€â”€ bootstrap.css
+â”‚   â”œâ”€â”€ bootstrap.min.css
+â”‚   â”œâ”€â”€ bootstrap-theme.css
+â”‚   â””â”€â”€ bootstrap-theme.min.css
+â”œâ”€â”€ js/
+â”‚   â”œâ”€â”€ bootstrap.js
+â”‚   â””â”€â”€ bootstrap.min.js
+â””â”€â”€ fonts/
+    â”œâ”€â”€ glyphicons-halflings-regular.eot
+    â”œâ”€â”€ glyphicons-halflings-regular.svg
+    â”œâ”€â”€ glyphicons-halflings-regular.ttf
+    â””â”€â”€ glyphicons-halflings-regular.woff
+</code></pre></div>
+
+  <p>è¿™æ˜¯æœ€åŸºæœ¬çš„ Bootstrap æ–‡ä»¶ç»„ç»‡å½¢å¼ï¼šæœªå‹ç¼©ç‰ˆçš„æ–‡ä»¶å¯ä»¥åœ¨ä»»æ„webé¡¹ç›®ä¸­ç›´æ¥ä½¿ç”¨ã€‚æˆ‘ä»¬åŒæ—¶æä¾›äº†å‹ç¼©ï¼ˆ<code>bootstrap.min.*</code>ï¼‰ä¸æœªå‹ç¼© (<code>bootstrap.*</code>) çš„ CSS å’Œ JS æ–‡ä»¶ã€‚å­—ä½“å›¾æ ‡æ–‡ä»¶æ¥è‡ªäº Glyphiconsã€‚</p>
+
+  <h2 id="whats-included-source">Bootstrap æºç </h2>
+  <p>Bootstrap æºç åŒ…å«äº†é¢„å…ˆç¼–è¯‘çš„ CSSã€JavaScript å’Œå›¾æ ‡å­—ä½“æ–‡ä»¶ï¼Œå¹¶ä¸”è¿˜æœ‰ LESSã€JavaScript å’Œæ–‡æ¡£çš„æºç ã€‚å…·ä½“æ¥è¯´ï¼Œä¸»è¦æ–‡ä»¶ç»„ç»‡ç»“æ„å¦‚ä¸‹ï¼š</p>
+<div class="highlight"><pre><code class="bash">bootstrap/
+â”œâ”€â”€ less/
+â”œâ”€â”€ js/
+â”œâ”€â”€ fonts/
+â”œâ”€â”€ dist/
+â”‚   â”œâ”€â”€ css/
+â”‚   â”œâ”€â”€ js/
+â”‚   â””â”€â”€ fonts/
+â””â”€â”€ docs/
+    â””â”€â”€ examples/
+</code></pre></div>
+  <p><code>less/</code>ã€<code>js/</code> å’Œ <code>fonts/</code> ç›®å½•åˆ†åˆ«åŒ…å«äº† CSSã€JS å’Œå­—ä½“å›¾æ ‡çš„æºç ã€‚<code>dist/</code> ç›®å½•åŒ…å«äº†ä¸Šé¢æ‰€è¯´çš„é¢„ç¼–è¯‘ Bootstrap åŒ…å†…çš„æ‰€æœ‰æ–‡ä»¶ã€‚<code>docs/</code> åŒ…å«äº†æ‰€æœ‰æ–‡æ¡£çš„æºç æ–‡ä»¶ï¼Œ<code>examples/</code> ç›®å½•æ˜¯ Bootstrap å®˜æ–¹æä¾›çš„å®ä¾‹å·¥ç¨‹ã€‚é™¤äº†è¿™äº›ï¼Œå…¶ä»–æ–‡ä»¶è¿˜åŒ…å« Bootstrap å®‰è£…åŒ…çš„å®šä¹‰æ–‡ä»¶ã€è®¸å¯è¯æ–‡ä»¶å’Œç¼–è¯‘è„šæœ¬ç­‰ã€‚</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="grunt" class="page-header">ç¼–è¯‘ CSS å’Œ JavaScript æ–‡ä»¶</h1>
+
+  <p class="lead">Bootstrap ä½¿ç”¨ <a href="javascript:if(confirm('http://gruntjs.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://gruntjs.com/'" tppabs="http://gruntjs.com/">Grunt</a> ä½œä¸ºç¼–è¯‘ç³»ç»Ÿï¼Œå¹¶ä¸”å¯¹å¤–æä¾›äº†ä¸€äº›æ–¹ä¾¿çš„æ–¹æ³•ç”¨äºç¼–è¯‘æ•´ä¸ªæ¡†æ¶ã€‚ä¸‹é¢è®²è§£çš„å°±æ˜¯å¦‚ä½•ç¼–è¯‘æºç ã€è¿è¡Œæµ‹è¯•ç”¨ä¾‹ç­‰å†…å®¹ã€‚</p>
+
+  <h2 id="grunt-installing">å®‰è£… Grunt</h2>
+  <p>å®‰è£… Grunt å‰ï¼Œä½ éœ€è¦<strong>é¦–å…ˆ<a href="javascript:if(confirm('http://nodejs.org/download/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://nodejs.org/download/'" tppabs="http://nodejs.org/download/">ä¸‹è½½å¹¶å®‰è£… node.js</a></strong> ï¼ˆnpm å·²ç»åŒ…å«åœ¨å†…ï¼‰ã€‚npm æ˜¯ <a href="javascript:if(confirm('http://npmjs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://npmjs.org/'" tppabs="http://npmjs.org/">node packaged modules</a> çš„ç®€ç§°ï¼Œå®ƒçš„ä½œç”¨æ˜¯åŸºäº node.js ç®¡ç†æ‰©å±•åŒ…ä¹‹é—´çš„ä¾èµ–å…³ç³»ã€‚</p>
+
+  ç„¶ååœ¨å‘½ä»¤è¡Œä¸­è¾“å…¥ä»¥ä¸‹å‘½ä»¤ï¼š
+  <ol>
+    <li>åœ¨å…¨å±€ç¯å¢ƒä¸­å®‰è£… <code>grunt-cli</code> ï¼š<code>npm install -g grunt-cli</code> ã€‚</li>
+    <li>è¿›å…¥ <code>/bootstrap/</code> æ ¹ç›®å½•ï¼Œç„¶åæ‰§è¡Œ <code>npm install</code> å‘½ä»¤ã€‚npm å°†è¯»å– <a href="javascript:if(confirm('https://github.com/twbs/bootstrap/blob/master/package.json  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/blob/master/package.json'" tppabs="https://github.com/twbs/bootstrap/blob/master/package.json"><code>package.json</code></a> æ–‡ä»¶å¹¶è‡ªåŠ¨å®‰è£…æ­¤æ–‡ä»¶ä¸­åˆ—å‡ºçš„æ‰€æœ‰è¢«ä¾èµ–çš„æ‰©å±•åŒ…ã€‚</li>
+  </ol>
+
+  <p>ä¸Šè¿°æ­¥éª¤å®Œæˆåï¼Œä½ å°±å¯ä»¥è¿è¡Œ Bootstrap æ‰€æä¾›çš„å„ä¸ª Grunt å‘½ä»¤äº†ã€‚</p>
+
+  <h2 id="grunt-commands">å¯ç”¨çš„ Grunt å‘½ä»¤</h2>
+  <h3><code>grunt dist</code> ï¼ˆä»…ç¼–è¯‘ CSS å’Œ JavaScript æ–‡ä»¶ï¼‰</h3>
+  <p>é‡æ–°ç”Ÿæˆ <code>/dist/</code> ç›®å½•ï¼Œå¹¶å°†ç¼–è¯‘å‹ç¼©åçš„ CSS å’Œ JavaScript æ–‡ä»¶æ”¾å…¥è¿™ä¸ªç›®å½•ä¸­ã€‚ä½œä¸ºä¸€å Bootstrap ç”¨æˆ·ï¼Œå¤§éƒ¨åˆ†æƒ…å†µä¸‹ä½ åªéœ€è¦æ‰§è¡Œè¿™ä¸€ä¸ªå‘½ä»¤ã€‚</p>
+
+  <h3><code>grunt watch</code> ï¼ˆç›‘æµ‹æ–‡ä»¶çš„æ”¹å˜ï¼Œå¹¶è¿è¡ŒæŒ‡å®šçš„ Grunt ä»»åŠ¡ï¼‰</h3>
+  <p>ç›‘æµ‹ Less æºç æ–‡ä»¶çš„æ”¹å˜ï¼Œå¹¶è‡ªåŠ¨é‡æ–°å°†å…¶ç¼–è¯‘ä¸º CSS æ–‡ä»¶ã€‚</p>
+
+  <h3><code>grunt test</code> ï¼ˆè¿è¡Œæµ‹è¯•ç”¨ä¾‹ï¼‰</h3>
+  <p>åœ¨ <a href="javascript:if(confirm('http://phantomjs.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://phantomjs.org/'" tppabs="http://phantomjs.org/">PhantomJS</a> ç¯å¢ƒä¸­è¿è¡Œ <a href="javascript:if(confirm('http://jshint.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://jshint.com/'" tppabs="http://jshint.com/">JSHint</a> å’Œ <a href="javascript:if(confirm('http://qunitjs.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://qunitjs.com/'" tppabs="http://qunitjs.com/">QUnit</a> è‡ªåŠ¨åŒ–æµ‹è¯•ç”¨ä¾‹ã€‚
+
+  <h3><code>grunt docs</code> (Build &amp; test the docs assets)</h3>
+  <p>Builds and tests CSS, JavaScript, and other assets which are used when running the documentation locally via <code>jekyll serve</code>.</p>
+
+  <h3><code>grunt</code> ï¼ˆé‡æ–°æ„å»ºæ‰€æœ‰å†…å®¹å¹¶è¿è¡Œæµ‹è¯•ç”¨ä¾‹ï¼‰</h3>
+  <p>ç¼–è¯‘å¹¶å‹ç¼© CSS å’Œ JavaScript æ–‡ä»¶ã€æ„å»ºæ–‡æ¡£ç«™ç‚¹ã€å¯¹æ–‡æ¡£åš HTML5 æ ¡éªŒã€é‡æ–°ç”Ÿæˆå®šåˆ¶å·¥å…·æ‰€éœ€çš„èµ„æºæ–‡ä»¶ç­‰ï¼Œéƒ½éœ€è¦ <a href="javascript:if(confirm('http://jekyllrb.com/docs/installation/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://jekyllrb.com/docs/installation/'" tppabs="http://jekyllrb.com/docs/installation/">Jekyll</a> å·¥å…·ã€‚è¿™äº›åªæœ‰åœ¨ä½ å¯¹ Bootstrap æ·±åº¦ç ”ç©¶æ—¶æ‰æœ‰ç”¨ã€‚</p>
+
+  <h2 id="grunt-troubleshooting">é™¤é”™</h2>
+  <p>å¦‚æœä½ åœ¨å®‰è£…ä¾èµ–åŒ…æˆ–è€…è¿è¡Œ Grunt å‘½ä»¤æ—¶é‡åˆ°äº†é—®é¢˜ï¼Œè¯·é¦–å…ˆåˆ é™¤ npm è‡ªåŠ¨ç”Ÿæˆçš„ <code>/node_modules/</code> ç›®å½•ï¼Œç„¶åï¼Œå†æ¬¡è¿è¡Œ <code>npm install</code> å‘½ä»¤ã€‚</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="template" class="page-header">åŸºæœ¬æ¨¡æ¿</h1>
+
+  <p class="lead">ä½¿ç”¨ä»¥ä¸‹ç»™å‡ºçš„è¿™ä»½è¶…çº§ç®€å•çš„ HTML æ¨¡ç‰ˆï¼Œæˆ–è€…ä¿®æ”¹<a href="#examples">è¿™äº›å®ä¾‹</a>ã€‚æˆ‘ä»¬å¼ºçƒˆå»ºè®®ä½ å¯¹è¿™äº›å®ä¾‹æŒ‰ç…§è‡ªå·±çš„éœ€æ±‚è¿›è¡Œä¿®æ”¹ï¼Œè€Œä¸è¦ç®€å•çš„å¤åˆ¶ã€ç²˜è´´ã€‚</p>
+
+  <p>æ‹·è´å¹¶ç²˜è´´ä¸‹é¢ç»™å‡ºçš„ HTML ä»£ç ï¼Œè¿™å°±æ˜¯ä¸€ä¸ªæœ€ç®€å•çš„ Bootstrap é¡µé¢äº†ã€‚</p>
+<div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;zh-cn&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
+
+    <span class="c">&lt;!-- Bootstrap --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;</span>
+    <span class="c">&lt;!-- WARNING: Respond.js doesn&#39;t work if you view the page via file:// --&gt;</span>
+    <span class="c">&lt;!--[if lt IE 9]&gt;</span>
+<span class="c">      &lt;script src=&quot;http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class="c">      &lt;script src=&quot;http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class="c">    &lt;![endif]--&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>ä½ å¥½ï¼Œä¸–ç•Œï¼<span class="nt">&lt;/h1&gt;</span>
+
+    <span class="c">&lt;!-- jQuery (necessary for Bootstrap&#39;s JavaScript plugins) --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="examples" class="page-header">å®ä¾‹ç²¾é€‰</h1>
+
+  <p class="lead">ä»¥ä¸‹å®ä¾‹å…¨éƒ¨åŸºäºå‰é¢æ‰€è®²çš„åŸºæœ¬æ¨¡æ¿å¹¶é…åˆ Bootstrap çš„ä¼—å¤šç»„ä»¶å¼€å‘è€Œæˆã€‚æˆ‘ä»¬é¼“åŠ±ä½ æ ¹æ®è‡ªèº«é¡¹ç›®çš„éœ€è¦å¯¹ Bootstrap è¿›è¡Œå®šåˆ¶å’Œä¿®æ”¹ã€‚</p>
+
+  <h3 id="examples-framework">Bootstrap æ¡†æ¶çš„åŸºæœ¬ç”¨æ³•</h3>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-7.htm" tppabs="http://v3.bootcss.com/examples/starter-template/">
+        <img src="starter-template.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/starter-template.jpg" alt="">
+      </a>
+      <h4>å…¥é—¨çº§æ¨¡æ¿</h4>
+      <p>åªæœ‰åŸºæœ¬çš„ä¸œè¥¿ï¼šå¼•å…¥äº†é¢„ç¼–è¯‘ç‰ˆçš„ CSS å’Œ JavaScript æ–‡ä»¶ï¼Œé¡µé¢åªåŒ…å«äº†ä¸€ä¸ª <code>container</code> å…ƒç´ ã€‚</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-8.htm" tppabs="http://v3.bootcss.com/examples/theme/">
+        <img src="theme.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/theme.jpg" alt="">
+      </a>
+      <h4>Bootstrap ä¸»é¢˜</h4>
+      <p>åŠ è½½å¯é€‰çš„ Bootstrap ä¸»é¢˜ï¼Œè·å¾—å¢å¼ºçš„è§†è§‰ä½“éªŒã€‚</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-9.htm" tppabs="http://v3.bootcss.com/examples/grid/">
+        <img src="grid.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/grid.jpg" alt="">
+      </a>
+      <h4>æ …æ ¼</h4>
+      <p>å¤šä¸ªå…³äºæ …æ ¼å¸ƒå±€æ–¹é¢çš„å®ä¾‹ï¼Œæ¶‰åŠåˆ°å±‚çº§ï¼ˆtierï¼‰ã€åµŒå¥—ï¼ˆnestingï¼‰ç­‰ç­‰ã€‚</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-10.htm" tppabs="http://v3.bootcss.com/examples/jumbotron/">
+        <img src="jumbotron.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/jumbotron.jpg" alt="">
+      </a>
+      <h4>Jumbotron</h4>
+      <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-11.htm" tppabs="http://v3.bootcss.com/examples/jumbotron-narrow/">
+        <img src="jumbotron-narrow.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/jumbotron-narrow.jpg" alt="">
+      </a>
+      <h4>Narrow jumbotron</h4>
+      <p>Build a more custom page by narrowing the default container and jumbotron.</p>
+    </div>
+  </div>
+
+  <h3 id="examples-navbars">å¯¼èˆªæ¡å®æˆ˜</h3>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-12.htm" tppabs="http://v3.bootcss.com/examples/navbar/">
+        <img src="navbar.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/navbar.jpg" alt="">
+      </a>
+      <h4>å¯¼èˆªæ¡</h4>
+      <p>åŒ…å«å¯¼èˆªæ¡å’Œä¸€èµ·é™„åŠ å†…å®¹çš„è¶…çº§åŸºç¡€çš„æ¨¡æ¿ã€‚</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-13.htm" tppabs="http://v3.bootcss.com/examples/navbar-static-top/">
+        <img src="navbar-static.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/navbar-static.jpg" alt="">
+      </a>
+      <h4>é™æ€å¯¼èˆªæ¡</h4>
+      <p>åŒ…å«ä¸€ä¸ªé™æ€å¯¼èˆªæ¡ä»¥åŠä¸€äº›é™„åŠ å†…å®¹çš„è¶…çº§åŸºç¡€çš„æ¨¡æ¿ã€‚</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-14.htm" tppabs="http://v3.bootcss.com/examples/navbar-fixed-top/">
+        <img src="navbar-fixed.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/navbar-fixed.jpg" alt="">
+      </a>
+      <h4>Fixed navbar</h4>
+      <p>Super basic template with a fixed top navbar along with some additional content.</p>
+    </div>
+  </div>
+
+  <h3 id="examples-custom">è‡ªå®šä¹‰ç»„ä»¶</h3>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-15.htm" tppabs="http://v3.bootcss.com/examples/cover/">
+        <img src="cover.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/cover.jpg" alt="">
+      </a>
+      <h4>Cover</h4>
+      <p>A one-page template for building simple and beautiful home pages.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-16.htm" tppabs="http://v3.bootcss.com/examples/carousel/">
+        <img src="carousel.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/carousel.jpg" alt="">
+      </a>
+      <h4>Carousel</h4>
+      <p>Customize the navbar and carousel, then add some new components.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-17.htm" tppabs="http://v3.bootcss.com/examples/blog/">
+        <img src="blog.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/blog.jpg" alt="">
+      </a>
+      <h4>åšå®¢</h4>
+      <p>ç®€å•çš„ä¸¤åˆ—å¼åšå®¢å¸ƒå±€ï¼Œè¿˜åŒ…å«äº†è‡ªå®šä¹‰çš„å¯¼èˆªã€é¡µå¤´ã€åˆ†ç±»ç­‰å…ƒç´ ã€‚</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-18.htm" tppabs="http://v3.bootcss.com/examples/dashboard/">
+        <img src="dashboard.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/dashboard.jpg" alt="">
+      </a>
+      <h4>æ§åˆ¶å°</h4>
+      <p>åŒ…å«åŸºæœ¬ç»“æ„çš„åå°ç®¡ç†æ¨¡æ¿ï¼Œè¿˜æœ‰å›ºå®šçš„ä¾§è¾¹æ å’Œå¯¼èˆªæ¡ã€‚</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-19.htm" tppabs="http://v3.bootcss.com/examples/signin/">
+        <img src="sign-in.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/sign-in.jpg" alt="">
+      </a>
+      <h4>ç™»å½•é¡µ</h4>
+      <p>è‡ªå®šä¹‰çš„è¡¨å•å¸ƒå±€ä»¥åŠç»è¿‡ç®€å•è®¾è®¡çš„ç™»å½•è¡¨å•ã€‚</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-20.htm" tppabs="http://v3.bootcss.com/examples/justified-nav/">
+        <img src="justified-nav.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/justified-nav.jpg" alt="">
+      </a>
+      <h4>Justified nav</h4>
+      <p>Create a custom navbar with justified links. Heads up! <a href="index-3.htm#nav-justified" tppabs="http://v3.bootcss.com/components/#nav-justified">Not too Safari friendly.</a></p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-21.htm" tppabs="http://v3.bootcss.com/examples/sticky-footer/">
+        <img src="sticky-footer.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/sticky-footer.jpg" alt="">
+      </a>
+      <h4>Sticky footer</h4>
+      <p>Attach a footer to the bottom of the viewport when the content is shorter than it.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-22.htm" tppabs="http://v3.bootcss.com/examples/sticky-footer-navbar/">
+        <img src="sticky-footer-navbar.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/sticky-footer-navbar.jpg" alt="">
+      </a>
+      <h4>Sticky footer with navbar</h4>
+      <p>Attach a footer to the bottom of the viewport with a fixed navbar at the top.</p>
+    </div>
+  </div>
+
+  <h3 id="examples-experiments">Experiments</h3>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-23.htm" tppabs="http://v3.bootcss.com/examples/non-responsive/">
+        <img src="non-responsive.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/non-responsive.jpg" alt="">
+      </a>
+      <h4>éå“åº”å¼ Bootstrap å¸ƒå±€</h4>
+      <p>Easily disable the responsiveness of Bootstrap <a href="#disable-responsive">per our docs</a>.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="index-24.htm" tppabs="http://v3.bootcss.com/examples/offcanvas/">
+        <img src="offcanvas.jpg" tppabs="http://v3.bootcss.com/examples/screenshots/offcanvas.jpg" alt="">
+      </a>
+      <h4>Offcanvas</h4>
+      <p>Build a toggleable off-canvas navigation menu for use with Bootstrap.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="tools" class="page-header">å·¥å…·</h1>
+
+  <h2 id="tools-bootlint">Bootlint</h2>
+  <p><strong><a href="javascript:if(confirm('https://github.com/twbs/bootlint  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootlint'" tppabs="https://github.com/twbs/bootlint">Bootlint</a></strong> æ˜¯ Bootstrap å®˜æ–¹æ‰€æ”¯æŒçš„ HTML <a href="javascript:if(confirm('http://en.wikipedia.org/wiki/Lint_(software)  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://en.wikipedia.org/wiki/Lint_(software)'" tppabs="http://en.wikipedia.org/wiki/Lint_(software)">æ£€æµ‹</a>å·¥å…·ã€‚åœ¨ä½¿ç”¨äº† Bootstrap çš„é¡µé¢ä¸Šï¼ˆæ²¡æœ‰å¯¹ Bootstrap åšä¿®æ”¹å’Œæ‰©å±•çš„æƒ…å†µä¸‹ï¼‰ï¼Œå®ƒèƒ½è‡ªåŠ¨æ£€æŸ¥æŸäº›å¸¸è§çš„ HTML é”™è¯¯ã€‚çº¯ç²¹çš„ Bootstrap ç»„ä»¶éœ€è¦å›ºå®šçš„ DOM ç»“æ„ã€‚Bootlint å°±èƒ½æ£€æµ‹ä½ çš„é¡µé¢ä¸Šçš„è¿™äº›â€œçº¯ç²¹â€çš„ Bootstrap ç»„ä»¶æ˜¯å¦ç¬¦åˆ Bootstrap çš„ HTML ç»“æ„è§„åˆ™ã€‚å»ºè®®å°† Bootlint åŠ å…¥åˆ°ä½ çš„å¼€å‘å·¥å…·ä¸­ï¼Œè¿™æ ·å°±èƒ½å¸®ä½ åœ¨é¡¹ç›®å¼€å‘ä¸­é¿å…ä¸€äº›ç®€å•çš„é”™è¯¯å½±å“ä½ çš„å¼€å‘è¿›åº¦ã€‚</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="community" class="page-header">ç¤¾åŒº</h1>
+
+  <p class="lead">Bootstrap æœ‰æˆç†Ÿã€å¼ºå¤§çš„ç¤¾åŒºã€‚å¦‚æœä½ å¸Œæœ›éšæ—¶è·å– Bootstrap çš„æœ€æ–°æ¶ˆæ¯ï¼Œè¯·å…³æ³¨ä»¥ä¸‹ç¤¾åŒºèµ„æºã€‚</p>
+  <ul>
+    <li>é˜…è¯»å¹¶è®¢é˜… <a href="javascript:if(confirm('http://blog.getbootstrap.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://blog.getbootstrap.com/'" tppabs="http://blog.getbootstrap.com/">Bootstrap å®˜æ–¹åšå®¢</a>ã€‚</li>
+    <li>é€šè¿‡ IRC ï¼ˆ<code>irc.freenode.net</code> æœåŠ¡å™¨ï¼‰ä¸å…¶ä»– Bootstrap ç²‰ä¸äº¤æµï¼Œæˆ‘ä»¬åœ¨ <a href="irc://irc.freenode.net/#twitter-bootstrap">##twitter-bootstrap é¢‘é“</a>ã€‚</li>
+    <li>å¦‚æœä½¿ç”¨ Bootstrap è¿‡ç¨‹ä¸­é‡åˆ°é—®é¢˜ï¼Œè¯·åœ¨ <a href="javascript:if(confirm('http://stackoverflow.com/questions/tagged/twitter-bootstrap-3  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://stackoverflow.com/questions/tagged/twitter-bootstrap-3'" tppabs="http://stackoverflow.com/questions/tagged/twitter-bootstrap-3">StackOverflow ä¸Šäº¤æµã€‚è¯·æœç´¢ <code>twitter-bootstrap-3</code></a> å…³é”®è¯ã€‚</li>
+    <li>å‚è§‚å…¶ä»–åŒå­¦åŸºäº Bootstrap æ„å»ºçš„ç½‘ç«™ï¼Œè¯·è¿›è¿™é‡Œï¼š<a href="javascript:if(confirm('http://expo.getbootstrap.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://expo.getbootstrap.com/'" tppabs="http://expo.getbootstrap.com/">Bootstrap ä¼˜ç«™ç²¾é€‰</a>.</li>
+  </ul>
+  <p>ä½ è¿˜å¯ä»¥åœ¨ Twitter ä¸Šå…³æ³¨è‹±æ–‡å®˜æ–¹è´¦å· <a href="javascript:if(confirm('https://twitter.com/twbootstrap  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/twbootstrap'" tppabs="https://twitter.com/twbootstrap">@twbootstrap </a> ï¼Œè¿™é‡Œæœ‰æœ€æ–°çš„å…«å¦å’Œæœ‰è¶£çš„è§†é¢‘ã€‚ï¼ˆ :( åŸæ¥å’ŒæŠ€æœ¯ä¸æ²¾è¾¹å•Šï¼ï¼‰</p>
+  <p>ä¸­å›½ç”¨æˆ·è¯·å…³æ³¨æˆ‘ä»¬çš„å®˜æ–¹å¾®åšè´¦å·ï¼š<a href="javascript:if(confirm('http://weibo.com/bootcss  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://weibo.com/bootcss'" tppabs="http://weibo.com/bootcss">@Bootstrapä¸­æ–‡ç½‘</a>ã€‚æˆ‘ä»¬å®šæœŸåˆ†äº«æ–°æŠ€æœ¯å’Œæ–°èµ„è®¯ã€‚</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="disable-responsive" class="page-header">ç¦æ­¢å“åº”å¼å¸ƒå±€</h1>
+
+  <p class="lead">Bootstrap ä¼šè‡ªåŠ¨å¸®ä½ é’ˆå¯¹ä¸åŒçš„å±å¹•å°ºå¯¸è°ƒæ•´ä½ çš„é¡µé¢ï¼Œä½¿å…¶åœ¨å„ä¸ªå°ºå¯¸çš„å±å¹•ä¸Šè¡¨ç°è‰¯å¥½ã€‚ä¸‹é¢æˆ‘ä»¬åˆ—å‡ºäº†å¦‚ä½•ç¦ç”¨è¿™ä¸€ç‰¹æ€§ï¼Œå°±åƒè¿™ä¸ª<a href="index-23.htm" tppabs="http://v3.bootcss.com/examples/non-responsive/">éå“åº”å¼å¸ƒå±€å®ä¾‹</a>é¡µé¢ä¸€æ ·ã€‚</p>
+
+  <h3>ç¦æ­¢å“åº”å¼å¸ƒå±€æœ‰å¦‚ä¸‹å‡ æ­¥ï¼š</h3>
+  <ol>
+    <li>ç§»é™¤ <a href="index-2.htm#overview-mobile" tppabs="http://v3.bootcss.com/css/#overview-mobile">æ­¤ CSS æ–‡æ¡£</a>ä¸­æåˆ°çš„è®¾ç½®æµè§ˆå™¨è§†å£ï¼ˆviewportï¼‰çš„æ ‡ç­¾ï¼š<code>&lt;meta&gt;</code>ã€‚</li>
+    <li>é€šè¿‡ä¸º <code>.container</code> ç±»è®¾ç½®ä¸€ä¸ª <code>width</code> å€¼ä»è€Œè¦†ç›–æ¡†æ¶çš„é»˜è®¤ width è®¾ç½®ï¼Œä¾‹å¦‚ <code>width: 970px !important;</code> ã€‚è¯·ç¡®ä¿è¿™äº›è®¾ç½®å…¨éƒ¨æ”¾åœ¨é»˜è®¤çš„ Bootstrap CSS æ–‡ä»¶çš„åé¢ã€‚æ³¨æ„ï¼Œå¦‚æœä½ æŠŠå®ƒæ”¾åˆ°åª’ä½“æŸ¥è¯¢ä¸­ï¼Œä¹Ÿå¯ä»¥ç•¥å» <code>!important</code> ã€‚</li>
+    <li>å¦‚æœä½¿ç”¨äº†å¯¼èˆªæ¡ï¼Œéœ€è¦ç§»é™¤æ‰€æœ‰å¯¼èˆªæ¡çš„æŠ˜å å’Œå±•å¼€è¡Œä¸ºã€‚</li>
+    <li>å¯¹äºæ …æ ¼å¸ƒå±€ï¼Œé¢å¤–å¢åŠ  <code>.col-xs-*</code> ç±»æˆ–æ›¿æ¢æ‰ <code>.col-md-*</code> å’Œ <code>.col-lg-*</code>ã€‚ ä¸è¦æ‹…å¿ƒï¼Œé’ˆå¯¹è¶…å°å±å¹•è®¾å¤‡çš„æ …æ ¼ç³»ç»Ÿèƒ½å¤Ÿåœ¨æ‰€æœ‰åˆ†è¾¨ç‡çš„ç¯å¢ƒä¸‹å±•å¼€ã€‚</li>
+  </ol>
+  <p>é’ˆå¯¹ IE8 ä»ç„¶éœ€è¦é¢å¤–å¼•å…¥ Respond.js æ–‡ä»¶ï¼ˆç”±äºä»ç„¶åˆ©ç”¨äº†æµè§ˆå™¨å¯¹åª’ä½“æŸ¥è¯¢ï¼ˆmedia queryï¼‰çš„æ”¯æŒï¼Œå› æ­¤è¿˜éœ€è¦åšå¤„ç†ï¼‰ã€‚è¿™æ ·å°±ç¦ç”¨äº† Bootstrap å¯¹ç§»åŠ¨è®¾å¤‡çš„å“åº”å¼æ”¯æŒã€‚</p>
+
+  <h3>ç¦æ­¢å“åº”å¼ç‰¹æ€§çš„ Bootstrap æ¨¡ç‰ˆ</h3>
+  <p>æˆ‘ä»¬å·²ç»æŒ‰ç…§ä¸Šé¢çš„æ­¥éª¤åˆ¶ä½œäº†ä¸€ä»½æ¡ˆä¾‹ã€‚ä»”ç»†é˜…è¯»å…¶æºç å¹¶å¯¹ç…§ä¸Šé¢çš„æ­¥éª¤å®è·µä¸€ä¸‹å§ã€‚</p>
+  <p>
+    <a href="index-23.htm" tppabs="http://v3.bootcss.com/examples/non-responsive/" class="btn btn-primary">éå“åº”å¼å¸ƒå±€å®ä¾‹</a>
+  </p>
+</div>
+
+
+<!-- Cross link to new migration page -->
+<div class="bs-callout bs-callout-info" id="migration">
+  <h4>ä» v2.x ç‰ˆæœ¬å‡çº§åˆ° v3.x ç‰ˆæœ¬</h4>
+  <p>ä½ åœ¨æ‰¾ä»è€ç‰ˆæœ¬å‡çº§åˆ° Bootstrap v3.x ç‰ˆæœ¬çš„æ–¹æ³•å—ï¼Ÿè¯·æŸ¥çœ‹æˆ‘ä»¬æ•´ç†çš„<a href="index-34.htm" tppabs="http://v3.bootcss.com/migration">å‡çº§æŒ‡å—</a>å§ã€‚</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="support" class="page-header">æµè§ˆå™¨å’Œè®¾å¤‡çš„æ”¯æŒæƒ…å†µ</h1>
+  <p class="lead">Bootstrap çš„ç›®æ ‡æ˜¯åœ¨æœ€æ–°çš„æ¡Œé¢å’Œç§»åŠ¨æµè§ˆå™¨ä¸Šæœ‰æœ€ä½³çš„è¡¨ç°ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œåœ¨è¾ƒè€æ—§çš„æµè§ˆå™¨ä¸Šå¯èƒ½ä¼šå¯¼è‡´æŸäº›ç»„ä»¶è¡¨ç°å‡ºçš„æ ·å¼æœ‰äº›ä¸åŒï¼Œä½†æ˜¯åŠŸèƒ½æ˜¯å®Œæ•´çš„ã€‚</p>
+
+  <h3 id="support-browsers">è¢«æ”¯æŒçš„æµè§ˆå™¨</h3>
+  <p>ç‰¹åˆ«æ³¨æ„ï¼Œæˆ‘ä»¬åšå†³æ”¯æŒè¿™äº›æµè§ˆå™¨çš„<strong>æœ€æ–°ç‰ˆæœ¬</strong>ã€‚åœ¨ Windows å¹³å°ï¼Œæˆ‘ä»¬æ”¯æŒ<strong> Internet Explorer 8-11</strong>ã€‚è¯·çœ‹ä¸‹é¢åˆ—å‡ºçš„è¯¦ç»†ä¿¡æ¯ã€‚</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td></td>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Internet Explorer</th>
+          <th>Opera</th>
+          <th>Safari</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Android</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-muted" rowspan="3" style="vertical-align: middle;">N/A</td>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> ä¸æ”¯æŒ</td>
+          <td class="text-muted">N/A</td>
+        </tr>
+        <tr>
+          <th>iOS</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-muted">N/A</td>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> ä¸æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+        </tr>
+        <tr>
+          <th>Mac OS X</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+        </tr>
+        <tr>
+          <th>Windows</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> ä¸æ”¯æŒ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Bootstrap åœ¨ Chromium å’Œ Linux ç‰ˆ Chromeã€Linux ç‰ˆ Firefox å’Œ Internet Explorer 7 ä¸Šçš„è¡¨ç°ä¹Ÿæ˜¯å¾ˆä¸é”™çš„ï¼Œè™½ç„¶æˆ‘ä»¬ä¸å¯¹å…¶è¿›è¡Œå®˜æ–¹æ”¯æŒã€‚</p>
+  <p>For a list of some of the browser bugs that Bootstrap has to grapple with, see our <a href="index-25.htm" tppabs="http://v3.bootcss.com/browser-bugs/">Wall of browser bugs</a>.</p>
+
+  <h3 id="support-ie8-ie9">Internet Explorer 8 å’Œ 9</h3>
+  <p>Internet Explorer 8 å’Œ 9 æ˜¯è¢«æ”¯æŒçš„ï¼Œç„¶è€Œï¼Œä½ è¦çŸ¥é“ï¼Œå¾ˆå¤š CSS3 å±æ€§å’Œ HTML5 å…ƒç´  -- ä¾‹å¦‚ï¼Œåœ†è§’çŸ©å½¢å’ŒæŠ•å½± -- æ˜¯è‚¯å®šä¸è¢«æ”¯æŒçš„ã€‚å¦å¤–ï¼Œ <strong>Internet Explorer 8 éœ€è¦ <a href="javascript:if(confirm('https://github.com/scottjehl/Respond  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/scottjehl/Respond'" tppabs="https://github.com/scottjehl/Respond">Respond.js</a> é…åˆæ‰èƒ½å®ç°å¯¹åª’ä½“æŸ¥è¯¢ï¼ˆmedia queryï¼‰çš„æ”¯æŒã€‚</strong></p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col" class="col-xs-4">CSS3 ç‰¹æ€§</th>
+          <th scope="col" class="col-xs-4">Internet Explorer 8</th>
+          <th scope="col" class="col-xs-4">Internet Explorer 9</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><code>border-radius</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> ä¸æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>box-shadow</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> ä¸æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒ</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>transform</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> ä¸æ”¯æŒ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> æ”¯æŒï¼Œä½†æ˜¯éœ€è¦æ·»åŠ  <code>-ms</code> å‰ç¼€</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>transition</code></th>
+          <td colspan="2" class="text-danger"><span class="glyphicon glyphicon-remove"></span> ä¸æ”¯æŒ</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>placeholder</code></th>
+          <td colspan="2" class="text-danger"><span class="glyphicon glyphicon-remove"></span> ä¸æ”¯æŒ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>è¯·å‚è€ƒ <a href="javascript:if(confirm('http://caniuse.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://caniuse.com/'" tppabs="http://caniuse.com/">Can I use...</a> ä»¥è·å–è¯¦ç»†çš„ CSS3 å’Œ HTML5 ç‰¹æ€§åœ¨å„ä¸ªæµè§ˆå™¨ä¸Šçš„æ”¯æŒæƒ…å†µã€‚</p>
+
+  <h3 id="support-ie8-respondjs">Internet Explorer 8 ä¸ Respond.js</h3>
+  <p>åœ¨å¼€å‘ç¯å¢ƒå’Œç”Ÿäº§ï¼ˆçº¿ä¸Šï¼‰ç¯å¢ƒéœ€è¦æ”¯æŒ Internet Explorer 8 æ—¶ï¼Œè¯·åŠ¡å¿…æ³¨æ„ä¸‹é¢ç»™å‡ºçš„è­¦å‘Šã€‚</p>
+  <h4 id="respond-js-x-domain">Respond.js ä¸ è·¨åŸŸï¼ˆcross-domainï¼‰ CSS çš„é—®é¢˜</h4>
+  <p>å¦‚æœ Respond.js å’Œ CSS æ–‡ä»¶è¢«æ”¾åœ¨ä¸åŒçš„åŸŸåæˆ–å­åŸŸåä¸‹é¢ï¼ˆä¾‹å¦‚ï¼Œä½¿ç”¨CDNï¼‰æ—¶éœ€è¦ä¸€äº›é¢å¤–çš„è®¾ç½®ã€‚è¯·å‚è€ƒ <a href="javascript:if(confirm('https://github.com/scottjehl/Respond/blob/master/README.md  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/scottjehl/Respond/blob/master/README.md#cdnx-domain-setup'" tppabs="https://github.com/scottjehl/Respond/blob/master/README.md#cdnx-domain-setup"> Respond.js æ–‡æ¡£</a> è·å–è¯¦ç»†ä¿¡æ¯ã€‚</p>
+  <h4 id="respond-file-proto">Respond.js ä¸ <code>file://</code> åè®®</h4>
+  <p>ç”±äºæµè§ˆå™¨çš„å®‰å…¨æœºåˆ¶ï¼ŒRespond.js ä¸èƒ½åœ¨é€šè¿‡ <code>file://</code> åè®®ï¼ˆæ‰“å¼€æœ¬åœ°HTMLæ–‡ä»¶æ‰€ç”¨çš„åè®®ï¼‰è®¿é—®çš„é¡µé¢ä¸Šå‘æŒ¥æ­£å¸¸çš„åŠŸèƒ½ã€‚å¦‚æœéœ€è¦æµ‹è¯• IE8 ä¸‹é¢çš„å“åº”å¼ç‰¹æ€§ï¼ŒåŠ¡å¿…é€šè¿‡ http åè®®è®¿é—®é¡µé¢ï¼ˆä¾‹å¦‚æ­å»º apacheã€nginx ç­‰ï¼‰ã€‚è¯·å‚è€ƒ <a href="javascript:if(confirm('https://github.com/scottjehl/Respond/blob/master/README.md  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/scottjehl/Respond/blob/master/README.md#support--caveats'" tppabs="https://github.com/scottjehl/Respond/blob/master/README.md#support--caveats">Respond.js æ–‡æ¡£</a>è·å–æ›´å¤šä¿¡æ¯ã€‚</p>
+  <h4 id="respond-import">Respond.js ä¸ <code>@import</code> æŒ‡ä»¤</h4>
+  <p>Respond.js ä¸æ”¯æŒé€šè¿‡ <code>@import</code> æŒ‡ä»¤æ‰€å¼•å…¥çš„ CSS æ–‡ä»¶ã€‚ä¾‹å¦‚ï¼ŒDrupal ä¸€èˆ¬è¢«é…ç½®ä¸ºé€šè¿‡ <code>@import</code> æŒ‡ä»¤å¼•å…¥CSSæ–‡ä»¶ï¼ŒRespond.js å¯¹å…¶å°†æ— æ³•èµ·åˆ°ä½œç”¨ã€‚è¯·å‚è€ƒ <a href="javascript:if(confirm('https://github.com/scottjehl/Respond/blob/master/README.md  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/scottjehl/Respond/blob/master/README.md#support--caveats'" tppabs="https://github.com/scottjehl/Respond/blob/master/README.md#support--caveats">Respond.js æ–‡æ¡£</a>è·å–æ›´å¤šä¿¡æ¯ã€‚</p>
+
+  <h3 id="support-ie8-box-sizing">Internet Explorer 8 ä¸ box-sizing å±æ€§</h3>
+  <p>å½“ <code>box-sizing: border-box;</code> ä¸ <code>min-width</code>ã€<code>max-width</code>ã€<code>min-height</code> æˆ– <code>max-height</code> ä¸€åŒä½¿ç”¨æ—¶ï¼ŒIE8 ä¸èƒ½å®Œå…¨æ”¯æŒ box-sizing å±ç›¸ã€‚ç”±äºæ­¤åŸå› ï¼Œä» Bootstrap v3.0.1 ç‰ˆæœ¬å¼€å§‹ï¼Œæˆ‘ä»¬ä¸å†ä¸º <code>.container</code> èµ‹äºˆ <code>max-width</code> å±æ€§ã€‚</p>
+
+  <h3 id="support-ie8-font-face">Internet Explorer 8 ä¸ @font-face</h3>
+  <p>IE8 has some issues with <code>@font-face</code> when combined with <code>:before</code>. Bootstrap uses that combination with its Glyphicons. If a page is cached, and loaded without the mouse over the window (i.e. hit the refresh button or load something in an iframe) then the page gets rendered before the font loads. Hovering over the page (body) will show some of the icons and hovering over the remaining icons will show those as well. <a href="javascript:if(confirm('https://github.com/twbs/bootstrap/issues/13863  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/issues/13863'" tppabs="https://github.com/twbs/bootstrap/issues/13863">See issue #13863</a> for details.</p>
+
+  <h3 id="support-ie-compatibility-modes">IE å…¼å®¹æ¨¡å¼</h3>
+  <p>Bootstrap ä¸æ”¯æŒ IE å¤è€çš„å…¼å®¹æ¨¡å¼ã€‚ä¸ºäº†è®© IE æµè§ˆå™¨è¿è¡Œæœ€æ–°çš„æ¸²æŸ“æ¨¡å¼ä¸‹ï¼Œå»ºè®®å°†æ­¤  <code>&lt;meta&gt;</code>  æ ‡ç­¾åŠ å…¥åˆ°ä½ çš„é¡µé¢ä¸­ï¼š</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+  <p>æŒ‰ <kbd>F12</kbd> é”®æ‰“å¼€ IE çš„è°ƒè¯•å·¥å…·ï¼Œå°±å¯ä»¥çœ‹åˆ° IE å½“å‰çš„æ¸²æŸ“æ¨¡å¼æ˜¯ä»€ä¹ˆã€‚</p>
+  <p>æ­¤ meta æ ‡ç­¾è¢«åŒ…å«åœ¨äº†æ‰€æœ‰ Bootstrap æ–‡æ¡£å’Œå®ä¾‹é¡µé¢ä¸­ï¼Œä¸ºçš„å°±æ˜¯åœ¨æ¯ä¸ªè¢«æ”¯æŒçš„ IE ç‰ˆæœ¬ä¸­æ‹¥æœ‰æœ€å¥½çš„ç»˜åˆ¶æ•ˆæœã€‚</p>
+  <p>è¯·å‚è€ƒ <a href="javascript:if(confirm('http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge'" tppabs="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge">è¿™ä¸ªå‘è¡¨åœ¨ StackOverflow ä¸Šçš„é—®é¢˜</a>ã€‚</p>
+
+  <h3 id="support-chinese-browsers-renderer-modes">å›½äº§æµè§ˆå™¨é«˜é€Ÿæ¨¡å¼</h3>
+  <p>å›½å†…æµè§ˆå™¨å‚å•†ä¸€èˆ¬éƒ½æ”¯æŒå…¼å®¹æ¨¡å¼ï¼ˆå³ IE å†…æ ¸ï¼‰å’Œé«˜é€Ÿæ¨¡å¼ï¼ˆå³ webkit å†…æ ¸ï¼‰ï¼Œä¸å¹¸çš„æ˜¯ï¼Œæ‰€æœ‰å›½äº§æµè§ˆå™¨éƒ½æ˜¯é»˜è®¤ä½¿ç”¨å…¼å®¹æ¨¡å¼ï¼Œè¿™å°±é€ æˆç”±äºä½ç‰ˆæœ¬ IE ï¼ˆIE8 åŠä»¥ä¸‹ï¼‰å†…æ ¸è®©åŸºäº Bootstrap æ„å»ºçš„ç½‘ç«™å±•ç°æ•ˆæœå¾ˆç³Ÿç³•çš„æƒ…å†µã€‚å¹¸è¿çš„æ˜¯ï¼Œå›½å†…æµè§ˆå™¨å‚å•†é€æ¸æ„è¯†åˆ°äº†è¿™ä¸€ç‚¹ï¼ŒæŸäº›å‚å•†å·²ç»å¼€å§‹æœ‰æ‰€ä½œä¸ºäº†ï¼</p>
+
+  <p>å°†ä¸‹é¢çš„ <code>&lt;meta&gt;</code> æ ‡ç­¾åŠ å…¥åˆ°é¡µé¢ä¸­ï¼Œå¯ä»¥è®©éƒ¨åˆ†å›½äº§æµè§ˆå™¨é»˜è®¤é‡‡ç”¨é«˜é€Ÿæ¨¡å¼æ¸²æŸ“é¡µé¢ï¼š</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;renderer&quot;</span> <span class="na">content=</span><span class="s">&quot;webkit&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+
+  <p>ç›®å‰åªæœ‰<a href="javascript:if(confirm('http://se.360.cn/v6/help/meta.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://se.360.cn/v6/help/meta.html'" tppabs="http://se.360.cn/v6/help/meta.html">360æµè§ˆå™¨</a>æ”¯æŒæ­¤ <code>&lt;meta&gt;</code> æ ‡ç­¾ã€‚å¸Œæœ›æ›´å¤šå›½å†…æµè§ˆå™¨å°½å¿«é‡‡å–è¡ŒåŠ¨ã€å°½å¿«è¿›å…¥é«˜é€Ÿæ—¶ä»£ï¼</p>
+
+  <h3 id="support-ie10-width">Windows 8 ä¸­çš„ Internet Explorer 10 å’Œ Windows Phone 8</h3>
+  <p>Internet Explorer 10 å¹¶æ²¡æœ‰å¯¹ <strong>å±å¹•çš„å®½åº¦</strong> å’Œ <strong>è§†å£ï¼ˆviewportï¼‰çš„å®½åº¦</strong> è¿›è¡ŒåŒºåˆ†ï¼Œè¿™å°±å¯¼è‡´ Bootstrap ä¸­çš„åª’ä½“æŸ¥è¯¢å¹¶ä¸èƒ½å¾ˆå¥½çš„å‘æŒ¥ä½œç”¨ã€‚ä¸ºäº†è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œä½ å¯ä»¥å¼•å…¥ä¸‹é¢åˆ—å‡ºçš„è¿™æ®µ CSS ä»£ç æš‚æ—¶ä¿®å¤æ­¤é—®é¢˜ï¼š</p>
+<div class="highlight"><pre><code class="scss"><span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>
+  <p>ç„¶è€Œï¼Œè¿™æ ·åšå¹¶ä¸èƒ½å¯¹ Windows Phone 8 <a href="javascript:if(confirm('http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx'" tppabs="http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx">Update 3 (a.k.a. GDR3)</a> ç‰ˆæœ¬ä¹‹å‰çš„è®¾å¤‡èµ·ä½œç”¨ï¼Œç”±äºè¿™æ ·åšå°†å¯¼è‡´ Windows Phone 8 è®¾å¤‡æŒ‰ç…§æ¡Œé¢æµè§ˆå™¨çš„æ–¹å¼å‘ˆç°é¡µé¢ï¼Œè€Œä¸æ˜¯è¾ƒçª„çš„â€œæ‰‹æœºâ€å‘ˆç°æ–¹å¼ï¼Œä¸ºäº†è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œè¿˜éœ€è¦<strong>åŠ å…¥ä»¥ä¸‹ CSS å’Œ JavaScript ä»£ç æ¥åŒ–è§£æ­¤é—®é¢˜</strong>ã€‚</p>
+<div class="highlight"><pre><code class="scss"><span class="k">@-webkit-viewport</span>   <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@-moz-viewport</span>      <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@-o-viewport</span>        <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@viewport</span>           <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><code class="js"><span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/IEMobile\/10\.0/</span><span class="p">))</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">msViewportStyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;style&#39;</span><span class="p">)</span>
+  <span class="nx">msViewportStyle</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span>
+      <span class="s1">&#39;@-ms-viewport{width:auto!important}&#39;</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">msViewportStyle</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+  <p>è¯·æŸ¥çœ‹ <a href="javascript:if(confirm('http://timkadlec.com/2013/01/windows-phone-8-and-device-width/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://timkadlec.com/2013/01/windows-phone-8-and-device-width/'" tppabs="http://timkadlec.com/2013/01/windows-phone-8-and-device-width/">Windows Phone 8 and Device-Width</a> ä»¥äº†è§£æ›´å¤šä¿¡æ¯ã€‚</p>
+  <p>ä½œä¸ºæé†’ï¼Œæˆ‘ä»¬å°†ä¸Šé¢çš„ä»£ç åŠ å…¥åˆ°äº†æ‰€æœ‰ Bootstrap æ–‡æ¡£å’Œå®ä¾‹é¡µé¢ä¸­ã€‚</p>
+
+  <h3 id="support-safari-percentages">Safari å¯¹ç™¾åˆ†æ¯”æ•°å­—å‡‘æ•´çš„é—®é¢˜</h3>
+  <p>OS X ä¸Šæ­è½½çš„ v7.1 ä»¥å‰ Safari å’Œ iOS v8.0 ä¸Šæ­è½½çš„ Safari æµè§ˆå™¨çš„ç»˜åˆ¶å¼•æ“å¯¹äºå¤„ç† <code>.col-*-1</code> ç±»æ‰€å¯¹åº”çš„å¾ˆé•¿çš„ç™¾åˆ†æ¯”å°æ•°å­˜åœ¨ bugã€‚ä¹Ÿå°±æ˜¯è¯´ï¼Œå¦‚æœä½ åœ¨ä¸€è¡Œï¼ˆrowï¼‰ä¹‹ä¸­å®šä¹‰äº†12ä¸ªå•ç‹¬çš„åˆ—ï¼ˆ.col-*-1ï¼‰ï¼Œä½ å°±ä¼šçœ‹åˆ°è¿™ä¸€è¡Œæ¯”å…¶ä»–è¡Œè¦çŸ­ä¸€äº›ã€‚é™¤äº†å‡çº§ Safari/iOS å¤–ï¼Œæœ‰ä»¥ä¸‹å‡ ç§æ–¹å¼æ¥åº”å¯¹æ­¤é—®é¢˜ï¼š</p>
+  <ul>
+    <li>ä¸ºæœ€åä¸€åˆ—æ·»åŠ  <code>.pull-right</code> ç±»ï¼Œå°†å…¶æš´åŠ›å‘å³å¯¹é½</li>
+    <li>æ‰‹åŠ¨è°ƒæ•´ç™¾åˆ†æ¯”æ•°å­—ï¼Œè®©å…¶é’ˆå¯¹Safariè¡¨ç°æ›´å¥½ï¼ˆè¿™æ¯”ç¬¬ä¸€ç§æ–¹å¼æ›´å›°éš¾ï¼‰</li>
+  </ul>
+  <p>æˆ‘ä»¬å°†ä¼šç»§ç»­è·Ÿè¸ªæ­¤é—®é¢˜ï¼Œå¦‚æœæœ‰æ›´ç®€æ˜“çš„è§£å†³æ–¹æ¡ˆï¼Œæˆ‘ä»¬ä¼šç«‹å³æ›´æ–°ä»£ç ã€‚</p>
+
+  <h3 id="support-fixed-position-keyboards">æ¨¡æ€æ¡†ã€å¯¼èˆªæ¡å’Œè™šæ‹Ÿé”®ç›˜</h3>
+  <h4>Overflow and scrolling</h4>
+  <p><code>&lt;body&gt;</code> å…ƒç´ åœ¨ iOS å’Œ Android ä¸Šå¯¹ <code>overflow: hidden</code> çš„æ”¯æŒå¾ˆæœ‰é™ã€‚ç»“æœå°±æ˜¯ï¼Œåœ¨è¿™ä¸¤ç§è®¾å¤‡ä¸Šçš„æµè§ˆå™¨ä¸­ï¼Œå½“ä½ æ»šåŠ¨å±å¹•è¶…è¿‡æ¨¡æ€æ¡†çš„é¡¶éƒ¨æˆ–åº•éƒ¨æ—¶ï¼Œ<code>&lt;body&gt;</code> ä¸­çš„å†…å®¹å°†å¼€å§‹éšç€æ»šåŠ¨ã€‚</p>
+  <h4>è™šæ‹Ÿé”®ç›˜</h4>
+  <p>è¿˜æœ‰ï¼Œå¦‚æœä½ æ­£åœ¨ä½¿ç”¨ fixed å®šä½çš„å¯¼èˆªæ¡æˆ–åœ¨æ¨¡æ€æ¡†ä¸Šé¢ä½¿ç”¨è¾“å…¥æ¡†ï¼Œè¿˜ä¼šé‡åˆ° iOS åœ¨é¡µé¢ç»˜åˆ¶ä¸Šçš„ bugï¼Œå½“è§¦å‘è™šæ‹Ÿé”®ç›˜ä¹‹åï¼Œå…¶ä¸ä¼šæ›´æ–° fixed å®šä½çš„å…ƒç´ çš„ä½ç½®ã€‚è¿™é‡Œæœ‰å‡ ç§è§£å†³æ–¹æ¡ˆï¼ŒåŒ…æ‹¬å°† fixed å®šä½è½¬å˜ä¸º <code>position: absolute</code> å®šä½ï¼Œæˆ–è€…å¯åŠ¨ä¸€ä¸ªå®šæ—¶å™¨æ‰‹å·¥ä¿®æ­£ç»„ä»¶çš„ä½ç½®ã€‚è¿™äº›æ²¡æœ‰åŠ å…¥ Bootstrap ä¸­ï¼Œå› æ­¤ï¼Œéœ€è¦ç”±ä½ è‡ªå·±é€‰æ‹©æœ€å¥½çš„è§£å†³æ–¹æ¡ˆå¹¶åŠ å…¥åˆ°ä½ çš„åº”ç”¨ä¸­ã€‚</p>
+  <h4>å¯¼èˆªæ¡ä¸Šçš„ä¸‹æ‹‰èœå•</h4>
+  <p>åœ¨ iOS è®¾å¤‡ä¸Šï¼Œç”±äºå¯¼èˆªç»„ä»¶ï¼ˆnavï¼‰çš„å¤æ‚çš„ z-indexing å±æ€§ï¼Œ<code>.dropdown-backdrop</code> å…ƒç´ å¹¶æœªè¢«ä½¿ç”¨ã€‚å› æ­¤ï¼Œä¸ºäº†å…³é—­å¯¼èˆªæ¡ä¸Šçš„ä¸‹æ‹‰èœå•ï¼Œå¿…é¡»ç›´æ¥ç‚¹å‡»ä¸‹æ‹‰èœå•ä¸Šçš„å…ƒç´ ï¼ˆæˆ–è€…ä»»ä½•å…¶ä»–èƒ½å¤Ÿè§¦å‘ iOS ä¸Š click äº‹ä»¶çš„å…ƒç´ ï¼‰ã€‚</p>
+
+  <h3 id="support-browser-zooming">æµè§ˆå™¨çš„ç¼©æ”¾åŠŸèƒ½</h3>
+  <p>é¡µé¢ç¼©æ”¾åŠŸèƒ½ä¸å¯é¿å…çš„ä¼šå°†æŸäº›ç»„ä»¶æå¾—ä¹±ä¸ƒå…«ç³Ÿï¼Œä¸å…‰æ˜¯ Bootstrap ï¼Œæ•´ä¸ªäº’è”ç½‘ä¸Šçš„æ‰€æœ‰é¡µé¢éƒ½æ˜¯è¿™æ ·ã€‚é’ˆå¯¹å…·ä½“é—®é¢˜ï¼Œæˆ‘ä»¬æˆ–è®¸å¯ä»¥ä¿®å¤å®ƒï¼ˆå¦‚æœæœ‰å¿…è¦çš„è¯ï¼Œè¯·å…ˆæœç´¢ä¸€ä¸‹ä½ çš„é—®é¢˜ï¼Œçœ‹çœ‹æ˜¯å¦å·²æœ‰è§£å†³æ–¹æ¡ˆï¼Œç„¶ååœ¨å‘æˆ‘ä»¬æäº¤ issueï¼‰ã€‚ç„¶è€Œï¼Œæˆ‘ä»¬æ›´å€¾å‘äºå¿½ç•¥è¿™äº›é—®é¢˜ï¼Œç”±äºè¿™äº›é—®é¢˜é™¤äº†ä¸€äº› hack æ‰‹æ®µï¼Œä¸€èˆ¬æ²¡æœ‰ç›´æ¥çš„è§£å†³æ–¹æ¡ˆã€‚</p>
+
+  <h3 id="support-printing">æ‰“å°æœºçš„è§†å£ï¼ˆviewportï¼‰</h3>
+  <p>å³ä½¿åœ¨æ–°ç‰ˆçš„æµè§ˆå™¨ä¸Šï¼Œæ‰“å°åŠŸèƒ½ä»ç„¶æœ‰é—®é¢˜ã€‚å…·ä½“æ¥è¯´ï¼Œä» Chrome v32 ç‰ˆæœ¬å¼€å§‹ï¼Œä¸ç®¡è®¾ç½®çš„è¾¹è·ï¼ˆmarginï¼‰æ˜¯å¤šå°‘ï¼Œæ‰“å°é¡µé¢æ—¶ Chrome æ‰€ç”¨çš„è§†å£ï¼ˆviewportï¼‰å®½åº¦éƒ½æ¯”å®é™…çš„çº¸å¼ æ­¤å­˜çª„å¾ˆå¤šã€‚è¿™å°±å¯¼è‡´ Bootstrap æ¿€æ´»å¹¶å±•ç¤ºå‡ºé’ˆå¯¹è¶…å°å±å¹•è®¾å¤‡çš„æ ·å¼ã€‚<a href="javascript:if(confirm('https://github.com/twbs/bootstrap/issues/12078  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/issues/12078'" tppabs="https://github.com/twbs/bootstrap/issues/12078">è¯·æŸ¥çœ‹ç¼–å· #12078 çš„ Bug è¯¦æƒ…ã€‚</a> æˆ‘ä»¬å»ºè®®çš„è§£å†³æ–¹æ¡ˆï¼š</p>
+  <ul>
+    <li>Embrace the extra-small grid and make sure your page looks acceptable under it.</li>
+    <li>Customize the values of the <code>@screen-*</code> Less variables so that your printer paper is considered larger than extra-small.</li>
+    <li>Add custom media queries to change the grid size breakpoints for print media only.</li>
+  </ul>
+
+  <h3 id="support-android-stock-browser">Android stock browser</h3>
+  <p>Out of the box, Android 4.1 (and even some newer releases apparently) ship with the Browser app as the default web browser of choice (as opposed to Chrome). Unfortunately, the Browser app has lots of bugs and inconsistencies with CSS in general.</p>
+  <h4>Select menus</h4>
+  <p>On <code>&lt;select&gt;</code> elements, the Android stock browser will not display the side controls if there is a <code>border-radius</code> and/or <code>border</code> applied. (See <a href="javascript:if(confirm('http://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with'" tppabs="http://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with">this StackOverflow question</a> for details.) Use the snippet of code below to remove the offending CSS and render the <code>&lt;select&gt;</code> as an unstyled element on the Android stock browser. The user agent sniffing avoids interference with Chrome, Safari, and Mozilla browsers.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">nua</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span>
+  <span class="kd">var</span> <span class="nx">isAndroid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Mozilla/5.0&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Android &#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;AppleWebKit&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Chrome&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isAndroid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;select.form-control&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;form-control&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;100%&#39;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+  <p>è§ <a href="javascript:if(confirm('http://jsbin.com/kuvoz/1  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://jsbin.com/kuvoz/1'" tppabs="http://jsbin.com/kuvoz/1"> JS Bin ä¸Šçš„ demoã€‚</a></p>
+
+  <h3 id="support-validators">Validators</h3>
+  <p>In order to provide the best possible experience to old and buggy browsers, Bootstrap uses <a href="javascript:if(confirm('http://browserhacks.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://browserhacks.com/'" tppabs="http://browserhacks.com/">CSS browser hacks</a> in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.</p>
+  <p>These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.</p>
+  <p>Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of <a href="#support-ie-compatibility-modes">X-UA-Compatible <code>&lt;meta&gt;</code> tags</a> to avoid Internet Explorer issues and our inclusion of a workaround for <a href="javascript:if(confirm('https://bugzilla.mozilla.org/show_bug.cgi?id=654072  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.mozilla.org/show_bug.cgi?id=654072'" tppabs="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">a certain Firefox bug</a>.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="third-parties" class="page-header">å¯¹ç¬¬ä¸‰æ–¹ç»„ä»¶çš„æ”¯æŒ</h1>
+  <p class="lead">è™½ç„¶æˆ‘ä»¬å¹¶ä¸å®˜æ–¹æ”¯æŒä»»ä½•ç¬¬ä¸‰æ–¹æ’ä»¶ï¼Œæˆ‘ä»¬è¿˜æ˜¯æä¾›ä¸€äº›å»ºè®®ï¼Œå¸®ä½ é¿å…å¯èƒ½åœ¨ä½ çš„é¡¹ç›®ä¸­ä¼šå‡ºç°çš„é—®é¢˜ã€‚</p>
+
+  <h3 id="third-box-sizing">box-sizing å±æ€§</h3>
+  <p>æŸäº›ç¬¬ä¸‰æ–¹è½¯ä»¶ï¼ŒåŒ…æ‹¬ Google åœ°å›¾å’Œ Google å®šåˆ¶æœç´¢å¼•æ“éƒ½ä¼šç”±äº <code>* { box-sizing: border-box; }</code> çš„è®¾ç½®è€Œäº§ç”Ÿå†²çªï¼Œè¿™ä¸€è®¾ç½®ä½¿ <code>padding</code> ä¸å½±å“é¡µé¢å…ƒç´ æœ€ç»ˆå®½åº¦çš„è®¡ç®—ã€‚æ›´å¤šä¿¡æ¯è¯·å‚è€ƒ <a href="javascript:if(confirm('http://css-tricks.com/box-sizing/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://css-tricks.com/box-sizing/'" tppabs="http://css-tricks.com/box-sizing/">ç›’æ¨¡å‹ä¸å°ºå¯¸è®¡ç®— - CSS Tricks</a>ã€‚</p>
+  <p>æ ¹æ®ä¸åŒæƒ…å†µï¼Œä½ å¯èƒ½éœ€è¦æ ¹æ®æƒ…å†µè¦†ç›–ï¼ˆç¬¬1ç§é€‰æ‹©ï¼‰æˆ–ä¸ºæ‰€æœ‰åŒºåŸŸè®¾ç½®ï¼ˆç¬¬2ç§é€‰æ‹©ï¼‰ã€‚</p>
+<div class="highlight"><pre><code class="scss"><span class="cm">/* Box-sizing resets</span>
+<span class="cm"> *</span>
+<span class="cm"> * ä¸ºäº†é¿å… Bootstrap è®¾ç½®çš„å…¨å±€ç›’æ¨¡å‹æ‰€å¸¦æ¥çš„å½±å“ï¼Œå¯ä»¥é‡ç½®å•ä¸ªé¡µé¢å…ƒç´ æˆ–è¦†ç›–æ•´ä¸ªåŒºåŸŸçš„ç›’æ¨¡å‹ã€‚</span>
+<span class="cm"> * ä½ æœ‰ä¸¤ç§é€‰æ‹©ï¼šè¦†ç›–å•ä¸ªé¡µé¢å…ƒç´ æˆ–é‡ç½®æ•´ä¸ªåŒºåŸŸã€‚å®ƒä»¬éƒ½å¯ä»¥é€šè¿‡çº¯ CSS æˆ– LESS ä»£ç çš„å½¢å¼å®ç°ã€‚</span>
+<span class="cm"> */</span>
+
+<span class="cm">/* Option 1A: é€šè¿‡ CSS ä»£ç è¦†ç›–å•ä¸ªé¡µé¢å…ƒç´ çš„ç›’æ¨¡å‹ */</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="na">-webkit-box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="na">-moz-box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="na">box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 1B: é€šè¿‡ä½¿ç”¨ Bootstrap æä¾›çš„ LESS mixin è¦†ç›–å•ä¸ªé¡µé¢å…ƒç´ çš„ç›’æ¨¡å‹ */</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.box-sizing</span><span class="o">(</span><span class="nt">content-box</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 2A: é€šè¿‡ CSS ä»£ç é‡ç½®æ•´ä¸ªåŒºåŸŸ */</span>
+<span class="nc">.reset-box-sizing</span><span class="o">,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="na">-webkit-box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="na">-moz-box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="na">box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 2B: é€šè¿‡ä½¿ç”¨è‡ªå®šä¹‰çš„ LESS mixin é‡ç½®æ•´ä¸ªåŒºåŸŸ */</span>
+<span class="nc">.reset-box-sizing</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="o">,</span>
+  <span class="o">*,</span>
+  <span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
+  <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="nc">.box-sizing</span><span class="o">(</span><span class="nt">content-box</span><span class="o">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.reset-box-sizing</span><span class="o">();</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="accessibility" class="page-header">å¯è®¿é—®æ€§</h1>
+  <p class="lead">Bootstrap éµå¾ªç»Ÿä¸€çš„ web æ ‡å‡†ï¼Œå¦å¤–ï¼Œé€šè¿‡åšä¸€äº›å°‘é‡çš„ä¿®æ”¹ï¼Œè¿˜å¯ä»¥è®©ä½¿ç”¨ <abbr title="Assistive Technology" class="initialism">è¾…åŠ©è®¾å¤‡ï¼ˆAT - Assistive Technologyï¼‰</abbr>ä¸Šç½‘çš„äººç¾¤è®¿é—®ä½ çš„ç«™ç‚¹ã€‚</p>
+
+  <h3>è·³è¿‡å¯¼èˆªåŒº</h3>
+  <p>å¦‚æœä½ çš„å¯¼èˆªéƒ¨åˆ†åŒ…å«å¾ˆå¤šé“¾æ¥ï¼Œå¹¶ä¸”åœ¨ DOM ç»“æ„ä¸Šä¹Ÿæ˜¯æ’åˆ—åœ¨ä¸»å†…å®¹ä¹‹å‰ï¼Œé‚£ä¹ˆï¼Œå»ºè®®åœ¨ç´§è·Ÿ <code>&lt;body&gt;</code> æ ‡ç­¾åé¢æ·»åŠ ä¸€ä¸ª <code>Skip to main contentï¼ˆç›´æ¥è¿›å…¥ä¸»å†…å®¹åŒºï¼‰</code> çš„é“¾æ¥ã€‚<a href="javascript:if(confirm('http://a11yproject.com/posts/skip-nav-links/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://a11yproject.com/posts/skip-nav-links/'" tppabs="http://a11yproject.com/posts/skip-nav-links/">(è¿™é‡Œè§£é‡Šäº†è¿™æ ·åšçš„åŸå› )</a></p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#content&quot;</span> <span class="na">class=</span><span class="s">&quot;sr-only sr-only-focusable&quot;</span><span class="nt">&gt;</span>Skip to main content ï¼ˆç›´æ¥è¿›å…¥ä¸»å†…å®¹åŒºï¼‰<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span> <span class="na">id=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>
+    é¡µé¢çš„ä¸»è¦å†…å®¹ã€‚
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
+
+  <h3>æ ‡é¢˜åµŒå¥—</h3>
+  <p>å½“æ ‡é¢˜åµŒå¥—æ—¶ (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>)ï¼Œä½ çš„æ–‡æ¡£çš„ä¸»æ ‡é¢˜åº”è¯¥æ˜¯ <code>&lt;h1&gt;</code> æ ‡ç­¾ã€‚éšåçš„æ ‡é¢˜é€»è¾‘ä¸Šå°±åº”è¯¥ä½¿ç”¨ <code>&lt;h2&gt;</code> - <code>&lt;h6&gt;</code> ï¼Œè¿™æ ·ï¼Œå±å¹•é˜…è¯»å™¨å°±å¯ä»¥æ„é€ å‡ºé¡µé¢çš„å†…å®¹åˆ—è¡¨äº†ã€‚</p>
+  <p>æ›´å¤šä¿¡æ¯è¯·å‚è€ƒï¼š <a href="javascript:if(confirm('http://squizlabs.github.io/HTML_CodeSniffer/Standards/Section508/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://squizlabs.github.io/HTML_CodeSniffer/Standards/Section508/'" tppabs="http://squizlabs.github.io/HTML_CodeSniffer/Standards/Section508/">HTML CodeSniffer</a> and <a href="javascript:if(confirm('http://accessibility.psu.edu/headings  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://accessibility.psu.edu/headings'" tppabs="http://accessibility.psu.edu/headings">Penn State's AccessAbility</a>.</p>
+
+  <h3>æ‰©å±•é˜…è¯»</h3>
+  <ul>
+    <li><a href="javascript:if(confirm('https://github.com/squizlabs/HTML_CodeSniffer  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/squizlabs/HTML_CodeSniffer'" tppabs="https://github.com/squizlabs/HTML_CodeSniffer">"HTML Codesniffer" bookmarklet for identifying accessibility issues</a></li>
+    <li><a href="javascript:if(confirm('http://a11yproject.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://a11yproject.com/'" tppabs="http://a11yproject.com/">The A11Y Project</a></li>
+    <li><a href="javascript:if(confirm('https://developer.mozilla.org/en-US/docs/Accessibility  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.mozilla.org/en-US/docs/Accessibility'" tppabs="https://developer.mozilla.org/en-US/docs/Accessibility">MDN accessibility documentation</a></li>
+  </ul>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="license-faqs" class="page-header">è®¸å¯è¯ FAQ</h1>
+  <p class="lead">Bootstrap éµå®ˆ MIT è®¸å¯è¯è¿›è¡Œå‘å¸ƒï¼Œ2014 Twitter ç‰ˆæƒæ‰€æœ‰ã€‚å½’ç»“ä¸ºä»¥ä¸‹å‡ ç‚¹ï¼š</p>
+
+  <h4>å¿…é¡»éµå®ˆï¼š</h4>
+  <ul>
+    <li>Include the license and copyright notice in your works</li>
+  </ul>
+
+  <h4>èµ‹äºˆä½ çš„æƒåŠ›ï¼š</h4>
+  <ul>
+    <li>Freely download and use Bootstrap, in whole or in part, for personal, private, company internal, or commercial purposes</li>
+    <li>Use Bootstrap in packages or distributions that you create</li>
+    <li>Modify the source code</li>
+    <li>Grant a sublicense to modify and distribute Bootstrap to third parties not included in the license</li>
+  </ul>
+
+  <h4>ç¦æ­¢ä»¥ä¸‹è¡Œä¸ºï¼š</h4>
+  <ul>
+    <li>Hold the authors and license owners liable for damages as Bootstrap is provided without warranty</li>
+    <li>Hold the creators or copyright holders of Bootstrap liable</li>
+    <li>Redistribute any piece of Bootstrap without proper attribution</li>
+    <li>Use any marks owned by Twitter in any way that might state or imply that Twitter endorses your distribution</li>
+    <li>Use any marks owned by Twitter in any way that might state or imply that you created the Twitter software in question</li>
+  </ul>
+
+  <h4>It does not require you to:</h4>
+  <ul>
+    <li>Include the source of Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it</li>
+    <li>Submit changes that you make to Bootstrap back to the Bootstrap project (though such feedback is encouraged)</li>
+  </ul>
+
+  <p>Bootstrap å®Œæ•´çš„è®¸å¯è¯åŒ…å«åœ¨ <a href="javascript:if(confirm('https://github.com/twbs/bootstrap/blob/master/LICENSE  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/blob/master/LICENSE'" tppabs="https://github.com/twbs/bootstrap/blob/master/LICENSE">é¡¹ç›®ä»“åº“</a>ä¸­ï¼Œè¯·å‚è€ƒã€‚</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="translations" class="page-header">æ–‡æ¡£ç¿»è¯‘</h1>
+
+  <p class="lead">æˆ‘ä»¬çš„ç¤¾åŒºæˆå‘˜å·²ç»å°† Bootstrap æ–‡æ¡£ç¿»è¯‘æˆå¤šç§è¯­è¨€ç‰ˆæœ¬ï¼Œè¯·æ ¹æ®ä½ çš„è¯­è¨€ä¹ æƒ¯é€‰æ‹©è‡ªå·±æ¯è¯­ç‰ˆæœ¬çš„æ–‡æ¡£åšå‚è€ƒã€‚</p>
+  <ul>
+    
+      <li><a href="index.htm" tppabs="http://v3.bootcss.com/" hreflang="zh">Bootstrap ä¸­æ–‡æ–‡æ¡£ (Chinese)</a></li>
+    
+      <li><a href="javascript:if(confirm('http://getbootstrap.dk/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://getbootstrap.dk/'" tppabs="http://getbootstrap.dk/" hreflang="da">Bootstrap pÃ¥ Dansk (Danish)</a></li>
+    
+      <li><a href="javascript:if(confirm('http://www.oneskyapp.com/docs/bootstrap/fr  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.oneskyapp.com/docs/bootstrap/fr'" tppabs="http://www.oneskyapp.com/docs/bootstrap/fr" hreflang="fr">Bootstrap en FranÃ§ais (French)</a></li>
+    
+      <li><a href="javascript:if(confirm('http://holdirbootstrap.de/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://holdirbootstrap.de/'" tppabs="http://holdirbootstrap.de/" hreflang="de">Bootstrap auf Deutsch (German)</a></li>
+    
+      <li><a href="javascript:if(confirm('http://www.hackerstribe.com/guide/IT-bootstrap-3.1.1/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.hackerstribe.com/guide/IT-bootstrap-3.1.1/'" tppabs="http://www.hackerstribe.com/guide/IT-bootstrap-3.1.1/" hreflang="it">Bootstrap in Italiano (Italian)</a></li>
+    
+      <li><a href="javascript:if(confirm('http://bootstrapk.com/BS3/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://bootstrapk.com/BS3/'" tppabs="http://bootstrapk.com/BS3/" hreflang="ko">Bootstrap í•œêµ­ì–´ (Korean)</a></li>
+    
+      <li><a href="javascript:if(confirm('http://www.oneskyapp.com/docs/bootstrap/ru  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.oneskyapp.com/docs/bootstrap/ru'" tppabs="http://www.oneskyapp.com/docs/bootstrap/ru" hreflang="ru">Bootstrap Ğ¿Ğ¾-Ñ€ÑƒÑÑĞºĞ¸ (Russian)</a></li>
+    
+      <li><a href="javascript:if(confirm('http://www.oneskyapp.com/docs/bootstrap/es  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.oneskyapp.com/docs/bootstrap/es'" tppabs="http://www.oneskyapp.com/docs/bootstrap/es" hreflang="es">Bootstrap en EspaÃ±ol (Spanish)</a></li>
+    
+      <li><a href="javascript:if(confirm('http://twbs.docs.org.ua/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://twbs.docs.org.ua/'" tppabs="http://twbs.docs.org.ua/" hreflang="uk">Bootstrap ÑƒĞºÑ€Ğ°Ñ—Ğ½ÑÑŒĞºĞ¾Ñ (Ukrainian)</a></li>
+    
+  </ul>
+  <p><strong class="text-danger">Bootstrap å®˜æ–¹ä¸æ‰˜ç®¡å„ç¿»è¯‘ç‰ˆæœ¬çš„æ–‡æ¡£ï¼Œå¦‚é‡é—®é¢˜ï¼Œè¯·è”ç³»ç›¸åº”çš„ç»´æŠ¤äººå‘˜ã€‚</strong></p>
+  <p>å¦‚æœä½ å‘ç° Bootstrap ä¸­æ–‡æ–‡æ¡£ä¸­å­˜åœ¨çš„é—®é¢˜ï¼Œè¯·å‘é€é‚®ä»¶è‡³ï¼š<a href="mailto:admin@bootcss.com">admin@bootcss.com</a></p>
+</div>
+
+
+        </div>
+        <div class="col-md-3">
+          <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+            <ul class="nav bs-docs-sidenav">
+              
+                <li>
+  <a href="#download">ä¸‹è½½</a>
+</li>
+<li>
+  <a href="#whats-included">åŒ…å«çš„å†…å®¹</a>
+  <ul class="nav">
+    <li><a href="#whats-included-precompiled">é¢„ç¼–è¯‘ç‰ˆ</a></li>
+    <li><a href="#whats-included-source">Bootstrap æºç </a></li>
+  </ul>
+</li>
+<li>
+  <a href="#grunt">ç¼–è¯‘ CSS å’Œ JavaScript æ–‡ä»¶</a>
+  <ul class="nav">
+    <li><a href="#grunt-installing">å®‰è£… Grunt</a></li>
+    <li><a href="#grunt-commands">å¯ä»¥ä½¿ç”¨çš„ Grunt å‘½ä»¤</a></li>
+    <li><a href="#grunt-troubleshooting">é™¤é”™</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#template">åŸºæœ¬æ¨¡æ¿</a>
+</li>
+<li>
+  <a href="#examples">å®ä¾‹ç²¾é€‰</a>
+  <ul class="nav">
+    <li><a href="#examples-framework">Bootstrap æ¡†æ¶çš„åŸºæœ¬ç”¨æ³•</a></li>
+    <li><a href="#examples-navbars">å¯¼èˆªæ¡å®æˆ˜</a></li>
+    <li><a href="#examples-custom">è‡ªå®šä¹‰ç»„ä»¶</a></li>
+    <li><a href="#examples-experiments">Experiments</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#tools">å·¥å…·</a>
+  <ul class="nav">
+    <li><a href="#tools-bootlint">Bootlint</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#community">ç¤¾åŒº</a>
+</li>
+<li>
+  <a href="#disable-responsive">ç¦æ­¢å“åº”å¼å¸ƒå±€</a>
+</li>
+<li>
+  <a href="#migration">ä» 2.x ç‰ˆæœ¬å‡çº§åˆ° 3.0 ç‰ˆæœ¬</a>
+</li>
+<li>
+  <a href="#support">å¯¹æµè§ˆå™¨å’Œè®¾å¤‡çš„æ”¯æŒæƒ…å†µ</a>
+  <ul class="nav">
+    <li><a href="#support-browsers">è¢«æ”¯æŒçš„æµè§ˆå™¨</a></li>
+    <li><a href="#support-ie8-ie9">Internet Explorer 8-9</a></li>
+    <li><a href="#support-ie8-respondjs">IE8 ä¸ Respond.js</a></li>
+    <li><a href="#support-ie8-box-sizing">IE8 ä¸ box-sizing å±æ€§</a></li>
+    <li><a href="#support-ie8-font-face">IE8 and @font-face</a></li>
+    <li><a href="#support-ie-compatibility-modes">IE å…¼å®¹æ¨¡å¼</a></li>
+    <li><a href="#support-chinese-browsers-renderer-modes">å›½äº§æµè§ˆå™¨é«˜é€Ÿæ¨¡å¼</a></li>
+    <li><a href="#support-ie10-width">IE10 å’Œ Windows (Phone) 8</a></li>
+    <li><a href="#support-safari-percentages">Safari å¯¹ç™¾åˆ†æ¯”æ•°å­—å‡‘æ•´çš„é—®é¢˜</a></li>
+    <li><a href="#support-fixed-position-keyboards">æ¨¡æ€æ¡†ã€å¯¼èˆªæ¡å’Œè™šæ‹Ÿé”®ç›˜</a></li>
+    <li><a href="#support-browser-zooming">æµè§ˆå™¨çš„ç¼©æ”¾åŠŸèƒ½</a></li>
+    <li><a href="#support-printing">æ‰“å°æœºçš„è§†å£ï¼ˆviewportï¼‰</a></li>
+    <li><a href="#support-android-stock-browser">Android stock browser</a></li>
+    <li><a href="#support-validators">Validators</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#third-parties">å¯¹ç¬¬ä¸‰æ–¹ç»„ä»¶çš„æ”¯æŒ</a>
+</li>
+<li>
+  <a href="#accessibility">å¯è®¿é—®æ€§</a>
+</li>
+<li>
+  <a href="#license-faqs">è®¸å¯è¯ FAQ</a>
+</li>
+<li>
+  <a href="#translations">æ–‡æ¡£ç¿»è¯‘</a>
+</li>
+
+              
+            </ul>
+            <a class="back-to-top" href="#top">
+              è¿”å›é¡¶éƒ¨
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+    
+
+    <p>Designed and built with all the love in the world by <a href="javascript:if(confirm('https://twitter.com/mdo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/mdo'" tppabs="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="javascript:if(confirm('https://twitter.com/fat  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/fat'" tppabs="https://twitter.com/fat" target="_blank">@fat</a>.</p>
+    <p>Maintained by the <a href="javascript:if(confirm('https://github.com/orgs/twbs/people  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/orgs/twbs/people'" tppabs="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="javascript:if(confirm('https://github.com/twbs/bootstrap/graphs/contributors  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/graphs/contributors'" tppabs="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>æœ¬é¡¹ç›®æºç å— <a href="javascript:if(confirm('https://github.com/twbs/bootstrap/blob/master/LICENSE  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/blob/master/LICENSE'" tppabs="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a> å¼€æºåè®®ä¿æŠ¤ï¼Œæ–‡æ¡£å— <a href="javascript:if(confirm('http://creativecommons.org/licenses/by/3.0/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://creativecommons.org/licenses/by/3.0/'" tppabs="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> å¼€æºåè®®ä¿æŠ¤ã€‚</p>
+    <ul class="bs-docs-footer-links muted">
+      <li>å½“å‰ç‰ˆæœ¬ï¼š v3.3.0</li>
+      <li>&middot;</li>
+      <li><a href="javascript:if(confirm('https://github.com/twbs/bootstrap  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap'" tppabs="https://github.com/twbs/bootstrap">GitHub ä»“åº“</a></li>
+      <li>&middot;</li>
+      <li><a href="index-1.htm#examples" tppabs="http://v3.bootcss.com/getting-started/#examples">å®ä¾‹ç²¾é€‰</a></li>
+      <li>&middot;</li>
+      <li><a href="javascript:if(confirm('http://v2.bootcss.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://v2.bootcss.com/'" tppabs="http://v2.bootcss.com/">v2.3.2 ä¸­æ–‡æ–‡æ¡£</a></li>
+      <li>&middot;</li>
+      <li><a href="index-6.htm" tppabs="http://v3.bootcss.com/about/">å…³äº</a></li>
+      <li>&middot;</li>
+      <li><a href="javascript:if(confirm('http://expo.bootcss.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://expo.bootcss.com/'" tppabs="http://expo.bootcss.com/">ä¼˜ç«™ç²¾é€‰</a></li>
+      <li>&middot;</li>
+      <li><a href="javascript:if(confirm('http://blog.getbootstrap.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://blog.getbootstrap.com/'" tppabs="http://blog.getbootstrap.com/">å®˜æ–¹åšå®¢</a></li>
+      <li>&middot;</li>
+      <li><a href="javascript:if(confirm('https://github.com/twbs/bootstrap/issues  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/issues'" tppabs="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+      <li>&middot;</li>
+      <li><a href="javascript:if(confirm('https://github.com/twbs/bootstrap/releases  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/releases'" tppabs="https://github.com/twbs/bootstrap/releases">å†å²ç‰ˆæœ¬</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="jquery.min.js" tppabs="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+
+  <script src="bootstrap.min.js" tppabs="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+
+  <script src="docs.min.js" tppabs="http://v3.bootcss.com/assets/js/docs.min.js"></script>
+
+
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="ie10-viewport-bug-workaround.js" tppabs="http://v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+<!-- Analytics
+================================================== -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbdb993b828cbe079a7fbc1a951f44726' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+  </body>
+</html>
